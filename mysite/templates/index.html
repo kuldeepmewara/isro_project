@@ -1,0 +1,63 @@
+
+{% extends 'base.html' %}
+<html>
+<head>
+
+</head>
+<body>
+
+{% block content %}
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<h2>HTML Table</h2>
+<table>
+
+
+
+  <tr>
+    <th>ID</th>
+    <th>TYPE</th>
+    <th>PRICE</th>
+	  <th>company</th>
+	  <th>purchase_date</th>
+    <th>quantity</th>
+
+  </tr>
+
+  {% for b in a %}
+   <tr>
+    <td>{{b.id}}</td>
+    <td>{{b.text}}</td>
+    <td>{{b.price}}</td>
+    <td>{{b.company}}</td>
+    <td>{{b.purchase_date}}</td>
+    <td>{{b.quantity}}</td>
+
+   </tr>
+
+  {% endfor %}
+
+
+</table>
+{% endblock %}
+</body>
+</html>
+
+
+
